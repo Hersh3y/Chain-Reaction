@@ -1,0 +1,12 @@
+Welcome to CPSC 1070 Chain Reaction!
+
+The goal is to connect all of the nodes into a single connected group
+by creating a series of chains between the nodes. The number of chains
+coming off of an node must match the number on that node.
+
+Enter the coordinates of the node you would like to connect and a direction.
+If there is already a chain, a second chain will be added. If there are
+already two chains, the chains will be removed.
+
+Please enter the name of the file you would like to use: not-a-real-file.txt
+Error opening file!

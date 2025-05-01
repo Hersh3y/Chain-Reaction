@@ -1,0 +1,296 @@
+Welcome to CPSC 1070 Chain Reaction!
+
+The goal is to connect all of the nodes into a single connected group
+by creating a series of chains between the nodes. The number of chains
+coming off of an node must match the number on that node.
+
+Enter the coordinates of the node you would like to connect and a direction.
+If there is already a chain, a second chain will be added. If there are
+already two chains, the chains will be removed.
+
+Please enter the name of the file you would like to use: board1.txt
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 . . 4 . . 3
+C | 1 . . . . . . . . .
+D | . . . 3 . . . . . .
+E | . . . . 1 . . . . 3
+F | 2 . . 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . .
+I | . . . 4 . . . . 2 .
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JT n
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 . . 4 . . 3
+C | 1 . . . . . . . . .
+D | . . . 3 . . . . . .
+E | . . . . 1 . . . . 3
+F | 2 . . 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): CK s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 . . 4 . . 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 . . 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): FK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 . . 4 . . 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BN e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 - - 4 . . 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BN e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 . . 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BT w
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 - - 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BT w
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . . . . . . . .
+D | | . . 3 . . . . . .
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BT s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . . . . . . . |
+D | | . . 3 . . . . . |
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BN s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . . 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): DN s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . | 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): DN s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . . . 1 . . . 3
+H | . . . . . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): FN s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . | . 1 . . . 3
+H | . . . | . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): FN s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 . . . . 3
+F | 2 - - 5 . . . . . .
+G | . . . H . 1 . . . 3
+H | . . . H . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): EO e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 - - - - 3
+F | 2 - - 5 . . . . . .
+G | . . . H . 1 . . . 3
+H | . . . H . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): GP e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 - - - - 3
+F | 2 - - 5 . . . . . .
+G | . . . H . 1 - - - 3
+H | . . . H . . . . . |
+I | . . . 4 . . . . 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): IN e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 - - - - 3
+F | 2 - - 5 . . . . . .
+G | . . . H . 1 - - - 3
+H | . . . H . . . . . |
+I | . . . 4 - - - - 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): IN e
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 - - - - 3
+F | 2 - - 5 . . . . . .
+G | . . . H . 1 - - - 3
+H | . . . H . . . . . |
+I | . . . 4 = = = = 2 |
+J | . . . . . . . . . 1
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): ET s
+
+    K L M N O P Q R S T
+  ---------------------
+A | . . . . . . . . . .
+B | . . . 3 = = 4 = = 3
+C | 1 . . | . . . . . |
+D | | . . 3 . . . . . |
+E | | . . H 1 - - - - 3
+F | 2 - - 5 . . . . . |
+G | . . . H . 1 - - - 3
+H | . . . H . . . . . |
+I | . . . 4 = = = = 2 |
+J | . . . . . . . . . 1
+
+Congratulations! You have connected all the nodes!

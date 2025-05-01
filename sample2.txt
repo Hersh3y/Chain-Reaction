@@ -1,0 +1,467 @@
+Welcome to CPSC 1070 Chain Reaction!
+
+The goal is to connect all of the nodes into a single connected group
+by creating a series of chains between the nodes. The number of chains
+coming off of an node must match the number on that node.
+
+Enter the coordinates of the node you would like to connect and a direction.
+If there is already a chain, a second chain will be added. If there are
+already two chains, the chains will be removed.
+
+Please enter the name of the file you would like to use: board2.txt
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 . . . . 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): abcdef
+
+Invalid input. Too many or too few characters.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): KA n
+
+Invalid input. Row must be A-J and column must be K-T.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK j
+
+Invalid input. Direction must be n, e, s, or w and there must be a space between the column and direction.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): BK s
+
+Invalid input. There is no node at that location.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AP e
+
+Invalid input. That path is blocked or goes off the board.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 - - - - 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 . . . . 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 - - - - 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | . . . . . . . . . .
+C | . . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HO n
+
+Invalid input. That path is blocked or goes off the board.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK s
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | | . . . . . . . . .
+C | | . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AK s
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | . . . . . . . . . .
+F | . . . . . 2 . 3 . .
+G | . . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): DK s
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 . . . 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 - - - 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HK e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 . . . . 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JL e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JQ e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 - - 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JQ e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 . . 6 . 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HR w
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 - - 6 . 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): hr w
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 = = 6 . 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): Hr e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 = = 6 - 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): hR E
+
+Invalid input. Direction must be n, e, s, or w and there must be a space between the column and direction.
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): hr e
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . . . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HR n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . . . . . .
+C | H . . . . . . 1 . 2
+D | 3 . . . . . . . . .
+E | | . . . . . . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . | . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AP s
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . | . . . .
+C | H . . . . | . 1 . 2
+D | 3 . . . . | . . . .
+E | | . . . . | . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . | . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): AP s
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . . . .
+E | | . . . . H . . . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . | . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): FR n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . .
+E | | . . . . H . | . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . | . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HR n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . .
+E | | . . . . H . | . .
+F | | . . . . 2 . 3 . .
+G | | . . . . . . H . .
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HT n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . |
+E | | . . . . H . | . |
+F | | . . . . 2 . 3 . |
+G | | . . . . . . H . |
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): HT n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . H
+E | | . . . . H . | . H
+F | | . . . . 2 . 3 . H
+G | | . . . . . . H . H
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 = = 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JT w
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . H
+E | | . . . . H . | . H
+F | | . . . . 2 . 3 . H
+G | | . . . . . . H . H
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 . . 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JT w
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . H
+E | | . . . . H . | . H
+F | | . . . . 2 . 3 . H
+G | | . . . . . . H . H
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . .
+J | . 1 - - - - 2 - - 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JT n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . H
+E | | . . . . H . | . H
+F | | . . . . 2 . 3 . H
+G | | . . . . . . H . H
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . |
+J | . 1 - - - - 2 - - 3
+
+Enter a row, a column, a space, and a cardinal direction (e.g. AK n): JT n
+
+    K L M N O P Q R S T
+  ---------------------
+A | 4 = = = = 4 . . . .
+B | H . . . . H . . . .
+C | H . . . . H . 1 . 2
+D | 3 . . . . H . | . H
+E | | . . . . H . | . H
+F | | . . . . 2 . 3 . H
+G | | . . . . . . H . H
+H | 3 = = = 4 = = 6 = 6
+I | . . . . . . . . . H
+J | . 1 - - - - 2 - - 3
+
+Congratulations! You have connected all the nodes!
